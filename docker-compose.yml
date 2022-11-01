@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    build: web
+    ports:
+      - '8080:8080'
+    restart: always
+  proxy:
+    build: proxy
+    ports:
+      - "80:80"
+    restart: always
